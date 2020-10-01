@@ -80,6 +80,7 @@ flag=0
 #keep running till tries are over or correct word is guessed
 while mistakes !=6 and flag!=1: 
     gchar = "   "
+    #input of valid character
     while len(gchar)!=1 or gchar<"a" or gchar>"z" or wrgchar.count(gchar)>0 or curchar.count(gchar)>0:
         gchar = input("\nGuess a Character:")
         gchar = gchar.lower()   #converting upper case to lower case
@@ -93,7 +94,7 @@ while mistakes !=6 and flag!=1:
             print("This was already checked and is a correct character")
 
     empword = guess(gchar, empword)   
-    if empword.find("_")<0:
+    if empword.find("_")<0:     #as no _ are present, therefore correct word has been guessed
         flag=1
 
 print("\n\n\n")
