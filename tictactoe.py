@@ -1,3 +1,4 @@
+#Sohini Mukhopadhyay
 import random
 
 def dispmat(board):
@@ -29,7 +30,7 @@ def validip(board, turn):
     ip=" "
     while True:
         ip = input("Enter Position: ")
-        try:
+        try:                #to catch string input except space
             if ip==" ":
                 print()
                 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
@@ -46,7 +47,7 @@ def validip(board, turn):
                     board[int(ip)] = turn
                     break
             else:
-                print("Please into valid integer(1-9)")
+                print("Please enter valid integer(1-9)")
         except:
             print("Please enter valid integer(1-9)")
     #return ip
@@ -100,7 +101,7 @@ while True:
     print()
     print("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^")
     print()
-    main()
+    main()                      # calling main function
     print()
     ip = input("DO YOU WANT TO PLAY ANOTHER GAME? (Y/y)").upper()
     if ip!='Y':
